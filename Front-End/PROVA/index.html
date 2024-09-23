@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Online</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">Nutri Online</div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#calculadora-imc">Calculadora de IMC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="containers">
+            <div class="content">
+                <div class="text">
+                    <h1>Seja bem-vindo ao Nutri Online</h1>
+                    <p>Saúde e bem-estar na palma da sua mão. No Nutri Online, conectamos você a profissionais que entendem suas necessidades 
+                        e ajudam a transformar sua vida de forma prática e acessível. Cuidar de você nunca foi tão fácil — descubra como ter uma alimentação balanceada, 
+                        treinos personalizados e saúde mental em equilíbrio, tudo em um só lugar.</p>
+                    <a href="" class="cta">Comece agora sua jornada de transformação!</a>
+                </div>
+                <div class="image">
+                    <img src="img/nutri2.jpg" alt="nutricionista">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="servicos" class="containers">
+            <h1>Cuide de cada aspecto da sua saúde</h1>
+            <p>Aqui no Nutri Online, acreditamos que saúde é um equilíbrio entre corpo e mente. Por isso, oferecemos serviços 
+                que abrangem os pilares fundamentais do bem-estar:</p>
+            <ul>
+                <li><strong>Alimentação Balanceada</strong><br>Receba orientações nutricionais personalizadas e ajustadas ao seu estilo de vida. 
+                    Comer bem é a base para ter mais energia, disposição e atingir seus objetivos de forma saudável.</li>
+                <li><strong>Treinos Personalizados</strong><br>Nossos profissionais de educação física criam treinos sob medida para suas necessidades. 
+                    Quer emagrecer, ganhar massa muscular ou melhorar sua resistência? Nós temos o treino certo para você.</li>
+                <li><strong>Saúde Mental</strong><br>Sabemos que o bem-estar não é apenas físico. 
+                    Por isso, contamos com uma rede de psicólogos parceiros que oferecem suporte emocional e 
+                    ajudam você a lidar com os desafios da vida.</li>
+            </ul>
+            <a href="" class="cta">Explore nossos serviços e comece a mudar sua vida hoje!</a>
+        </section>
+
+        <section id="blog" class="containers">
+            <h1>Dicas e novidades sobre saúde e bem-estar</h1>
+            <ul>
+                <li class="post">
+                    <a href="">
+                        <img src="img/dieta.jpg" alt="Dieta balanceada">
+                        <div class="post-title">10 Dicas para Manter uma Dieta Equilibrada Sem Sacrifícios</div>
+                    </a>
+                </li>
+                <li class="post">
+                    <a href="">
+                        <img src="img/humor.jpg" alt="Humor e produtividade">
+                        <div class="post-title">Como a Alimentação Afeta Seu Humor e Produtividade</div>
+                    </a>
+                </li>
+                <li class="post">
+                    <a href="">
+                        <img src="img/exercicios.jpg" alt="Exercícios regulares">
+                        <div class="post-title">Os Benefícios da Prática Regular de Exercícios para a Saúde Mental</div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+
+        <section id="calculadora-imc" class="containers">
+            <h1>Calculadora de IMC</h1>
+            <p>Quer saber como está sua saúde? Utilize nossa calculadora de IMC e descubra o seu Índice de Massa Corporal. 
+                Com essa informação, você pode ajustar seu plano de alimentação e treino para alcançar os resultados desejados.</p>
+            
+                <form onsubmit="calculaImc(event)">
+                    <label for="imcPeso" class="imcTitulo offTela">Peso</label>
+                    <input type="number" name="imcPeso" class="calculadoraImc offTela" placeholder="62,5" step="0.01" id="imcPeso">
+                    
+                    <label for="imcAltura" class="imcTitulo offTela">Altura</label>
+                    <input type="number" name="imcAltura" class="calculadoraImc offTela" placeholder="1,73" step="0.01" id="imcAltura">
+                    
+                    <label for="imcIdade" class="imcTitulo offTela">Idade</label>
+                    <input type="number" name="imcIdade" class="calculadoraImc offTela" placeholder="35" id="imcIdade">
+                
+                    <label for="imcSexo" class="imcTitulo offTela">Atividade Física</label>
+                    <select name="atividadeFisica" class="atividadeFisica" id="imcNivelFisico">
+                        <option value="sedentario" class="atividadeFisica">Sedentário</option>
+                        <option value="moderado" class="atividadeFisica">Moderado</option>
+                        <option value="intenso" class="atividadeFisica">Intenso</option>
+                    </select>
+                    
+                    <input type="submit" class="botaoCalcula" value="Calcular" id="calcular">
+                </form>
+                
+                <br><div id="mensagemFinal"></div>
+
+        </section>
+    </main>
+
+    <footer>
+        <ul id="footer">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#calculadora-imc">Calculadora de IMC</a></li>
+        </ul>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+
+</html>
